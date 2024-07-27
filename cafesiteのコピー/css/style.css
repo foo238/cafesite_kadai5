@@ -199,7 +199,7 @@ body {
     text-align: justify;
 }
 
-.about h3 {
+.aboutsp {
     display: none;
 }
 
@@ -222,13 +222,10 @@ body {
     font-size: 17px;
     line-height: 1.47;
 }
-/* .menuwrap {
-    flex-direction: column;
-} */
+
 
 .menuimg img{
     width: 151px;
-    height: 78px;
     margin: 0 auto;
 }
 
@@ -238,17 +235,16 @@ body {
    
 }
 
-.drinkmenu {
+.cafemenu {
+    justify-content: space-around;
     width: 30%;
+    padding-left: 20px;
 }
-.foodmenu {
-    width: 30%;
-    padding-left: 50px;
-}
-.sweetsmenu {
-    width: 30%;
-    padding-left: 50px;
-}
+
+
+
+
+
 
 /* ギャラリー */
 
@@ -277,39 +273,9 @@ body {
    
 }
 
-/* .gallerywrap {
-    position: relative;
-    
-
-}
-
-.gallerywrap::after {
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    content: "";
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid #333;
-    border-right: 2px solid #333;
-    transform: rotate(45deg);
-    z-index: 1000;
-    background-color: #d30202;
-} */
-
-
-
-/* イベント */
-
-.eventul li {
-    display: none;
-}
-
 
 .eventwrap {
     border: 4px solid #4f260b;
-    flex-direction: column;
     margin-top: 40px;
     background-color: #ffffff;
     border-spacing: 0;
@@ -321,15 +287,14 @@ body {
     margin: 0 auto;
 }
 
-.eventwrap ul{
-    display: flex;
-    flex-wrap: wrap;
+.eventul span{
+    display: block;
+    
 
 }
 
 .eventwrap li {
     padding-left: 160px;
-    text-align: center;
     font-size: 23px;
     line-height: 1.95;
     font-weight: lighter;
@@ -373,7 +338,6 @@ body {
 
 .acccessimg {
     width: 213px;
-    height: 78px;
     margin: 0 auto;
 }
 
@@ -393,7 +357,7 @@ body {
 
 }
 .footerback {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     background-color: #ffffff;
 }
@@ -425,7 +389,7 @@ body {
 
 .designcafe {
     margin: 0 auto;
-    width: 1000px;
+    max-width: 1000px;
     text-align: center;
     padding:50px 0;
 }
@@ -535,8 +499,9 @@ body {
     .aboutwrap h3 {
         font-size: 38px;
     }
-
-    @media screen and (max-width:767px) {
+  } 
+    
+  @media screen and (max-width:767px) {
         .happy1 {
             font-size: 16px;
         }
@@ -550,6 +515,12 @@ body {
 
         .happy2 {
             font-size: 16px;
+        }
+        
+    
+        .aboutsp {
+            display: block;
+            width: 30%;
         }
         .about h3 {
             display: block;
@@ -583,60 +554,53 @@ body {
         }
 
         .aboutwrap p {
-           padding: 30px 20px 0 20px;
+           padding: 15px 20px 0 20px;
+        }
+        .aboutsp {
+            padding-bottom: 15px;
         }
 
+        .menuimg {
+            width: 25%;
+            margin:0 auto;
+        }
         .menucontainer {
             display: flex;
             flex-direction: column;
         }
 
-        .drinkmenu {
+        .cafemenu {
             width: 85%;
             margin: 0 auto;
         }
-        .drinkmenu h3 {
+
+        .cafemenu h3{
             padding-bottom: 5px;
         }
 
-        .drinkmenu p {
+        .cafemenu p {
             padding-bottom: 30px;
             font-size: 17px;
+        }
         
+
+        .gallery {
+            margin: 50px 0 50px 0;
         }
 
-        .foodmenu {
-            width: 85%;
-            padding: 0;
-            margin: 0 auto;
-        }
-        .foodmenu h3 {
-            padding-bottom: 5px;
-            font-size: 40px;
+        .galleryimg {
+            width: 140px;
         }
 
-        .foodmenu p {
-            padding-bottom: 30px;
-            font-size: 17px;
+        .gallerywrap {
+            margin: 0;
         }
 
-        .sweetsmenu {
-            width: 85%;
-            padding: 0;
-            margin: 0 auto;
+        .gallerywrap {
+            position: relative;
         }
-
-        .sweetsmenu h3 {
-            padding-bottom: 5px;
-        }
-        .sweetsmenu p {
-            padding-bottom: 30px;
-            font-size: 17px;
-        }
-
         .gallerywrap img:first-child {
             width: 100%;
-            position: relative;
             z-index: 1000;
         }
         .gallerywrap img:nth-child(n+2) {
@@ -645,43 +609,49 @@ body {
             left: 0;
         }
 
+        .eventwrap {
+            margin: 0;
+        }
+
+        .eventimg {
+            width: 25%;
+        }
 
         .eventwrap li{
-           display: none;
-        }
-
-        .eventul li {
-            padding: 15px 0 0 0;
-            display: flex;
-            flex-direction: column;
-            font-size: 20px;
-        }
-
-        .eventul {
+            padding: 15px 0 0 30px;
             display: block;
-            
-            
+            font-size: 20px;
+            overflow: hidden;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           
+          
         }
 
         .eventwrap li span {
-            width: 100%;
+            padding-left: 20px;
             margin: 0;
             font-size: 16px;
-           margin-left: 20px;
            text-decoration: underline;
            border-bottom: none;
            
+           
+        }
+
+        .acccessimg {
+            width: 30%;
         }
 
         .acccess iframe  {
-            width: 100vw;
+            margin: 0;
+            height: 180px;
         }
 
         .footer {
             padding: 0;
         }
         .footerback {
-            width: 100vw;
+            max-width: 100%;
             margin: 0;
         }
         .footerwrap {
@@ -699,8 +669,14 @@ body {
         }
 
         .designcafe {
-            width: 100vw;
+            max-width: 100%;
             margin: 0;
         }
 
-    }   }
+        .fixed {
+            width: 100px;
+            height: 100px;
+            bottom: 10px;
+            right: 10px;
+        }
+    }
