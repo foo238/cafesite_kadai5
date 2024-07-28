@@ -119,6 +119,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 200;
 }
 
 /* ハッピー */
@@ -264,6 +265,7 @@ body {
 .gallerywrap {
     display: flex;
     margin-top: 30px;
+    z-index: 100;
    
    
 }
@@ -502,6 +504,14 @@ body {
   } 
     
   @media screen and (max-width:767px) {
+
+        .container {
+            padding: 0;
+
+        }
+        .logo {
+            width: 190px;
+        }
         .happy1 {
             font-size: 16px;
         }
@@ -565,8 +575,9 @@ body {
             margin:0 auto;
         }
         .menucontainer {
-            display: flex;
-            flex-direction: column;
+            display: block;
+            /* display: flex;
+            flex-direction: column; */
         }
 
         .cafemenu {
@@ -593,6 +604,7 @@ body {
         }
 
         .gallerywrap {
+            
             margin: 0;
         }
 
@@ -618,7 +630,7 @@ body {
         }
 
         .eventwrap li{
-            padding: 15px 0 0 30px;
+            padding: 15px 10px 0 30px;
             display: block;
             font-size: 20px;
             overflow: hidden;
@@ -640,6 +652,7 @@ body {
 
         .acccessimg {
             width: 30%;
+            padding-bottom: 25px;
         }
 
         .acccess iframe  {
